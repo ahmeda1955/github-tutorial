@@ -30,6 +30,11 @@
 3. Then, you intialize git in this directory/repo by typing in `git init`
 4. Add a file; in this case we'll use a README.md file to get started. So, type in `touch README.md` to create a README.md file.
 5. Save your file. (Check for an auto-save feauture provided by your IDE service)
+6. "Add" your file to the Git stage by typing in `git add README.md`
+7. Now, we have to "commit" the file which is the last step the file goes through before being sent through to the public!    
+To make a commit you type in `git commit -m "add a message"`
+  
+_Typing in `git status` every once in a while while during the process of adding/commiting/pushing files wouldn't hurt._
 
 
 ---
