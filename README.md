@@ -32,10 +32,17 @@
 5. Save your file. (Check for an auto-save feauture provided by your IDE service)
 6. "Add" your file to the Git stage by typing in `git add README.md`
 7. Now, we have to "commit" the file which is the last step the file goes through before being sent through to the public!    
-To make a commit you type in `git commit -m "add a message"`
+To make a commit you type in `git commit -m "add a message"`  
+_*Typing in `git status` every once in a while, during the process of adding/commiting/pushing files wouldn't hurt, it'll help you keep track of the changes made to your file_  
+
+8. Now your file is waiting to be sent to the github, however, you'd need another repo in github, so that you can `push` your file to.
+9. Create a repo in GitHub. _**Make sure the repo's name is the same as the one in your local ide**_ (first-repo).
+
+10. You're one step away from sending your file to the public! Congrats! Before publishing your file , you need to type in 
+`git remote add origin https://github.com/ahmeda1955/first-repo.git` that's just you, connecting your local repo, to the github cloud repo.
+11. Finally, what we've all been waiting for! You are now, ready to `push` or publish your file to the public! It's simpler than you probably thought. All you need to type in your local ide is `git push`. Yup, that's all, just `git push`.
+
+
   
-_Typing in `git status` every once in a while while during the process of adding/commiting/pushing files wouldn't hurt._
 
-
----
 ## Workflow & Commands
