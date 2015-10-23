@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GitHub-Tutorial by ahmeda1955</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>GitHub-Tutorial</h1>
+        <p>Learning Github&#39;s Basics</p>
+        <p class="view"><a href="https://github.com/ahmeda1955/github-tutorial">View the Project on GitHub <small>ahmeda1955/github-tutorial</small></a></p>
+        <ul>
+          <li><a href="https://github.com/ahmeda1955/github-tutorial/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ahmeda1955/github-tutorial/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ahmeda1955/github-tutorial">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="github-tutorial" class="anchor" href="#github-tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Tutorial</h1>
+
+<h3>
+<a id="by-ahmed-abdalla" class="anchor" href="#by-ahmed-abdalla" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>by <strong>Ahmed Abdalla</strong></em>
+</h3>
+
+<hr>
+
+<h2>
+<a id="git-vs-github" class="anchor" href="#git-vs-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git vs. GitHub</h2>
+
+<ul>
+<li><p><strong><em>Git:</em></strong> Git is an online version control serivce used for coding and software development; Git keeps "snapshots" of code; you don't need Github to use Git.  </p></li>
+<li><p><strong><em>GitHub:</em></strong> GitHub is a Git repository hosting service that stores code in an online cloud which allows easy collaboration on files/code ; in order to use Github, you need to have Git. </p></li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="initial-setup" class="anchor" href="#initial-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Setup</h2>
+
+<ol>
+<li>Create a GitHub account.</li>
+<li>On your local IDE, type in <code>git config --global user.name "FirstName LastName"</code> </li>
+<li>Then, type in <code>git config --global user.email "email@appleseed.org"</code>
+</li>
+<li>Look for and acquire the SSH key provided by your IDE service.</li>
+<li>Now, go to Github &gt; profile icon &gt; settings &gt; SSH Keys &gt; Add SSH key</li>
+<li>Type in the SSH key you acquired, and save it. It is recommended that you use  the name of the IDE service you're using to save the SSH key as it will help you identify which SSH belongs to what later on, when you connect your GitHub to more than one IDE service.</li>
+<li>Finally, on your IDE, type in <code>ssh -T git@github.com</code> , then type in <em>yes</em> to confirm.</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="repository-setup" class="anchor" href="#repository-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository Setup</h2>
+
+<ol>
+<li>In your IDE, type <code>mkdir first-repo</code> (first-repo would be the name of your repo)</li>
+<li>Now, you have to navigate into the repo you just created, you do that by typing <code>cd first-repo</code>
+</li>
+<li>Then, you intialize git in this directory/repo by typing in <code>git init</code>
+</li>
+<li>Add a file; in this case we'll use a README.md file to get started. So, type in <code>touch README.md</code> to create a README.md file.</li>
+<li>Save your file. (Check for an auto-save feauture provided by your IDE service)</li>
+<li>"Add" your file to the Git stage by typing in <code>git add README.md</code>
+</li>
+<li><p>Now, we have to "commit" the file which is the last step the file goes through before being sent through to the public!<br>
+To make a commit you type in <code>git commit -m "add a message"</code><br>
+<em>*Typing in <code>git status</code> every once in a while, during the process of adding/commiting/pushing files wouldn't hurt, it'll help you keep track of the changes made to your file</em>  </p></li>
+<li><p>Now your file is waiting to be sent to the github, however, you'd need another repo in github, so that you can <code>push</code> your file to.</p></li>
+<li><p>Create a repo in GitHub. <em><strong>Make sure the repo's name is the same as the one in your local ide</strong></em> (first-repo).</p></li>
+<li><p>You're one step away from sending your file to the public! Congrats! Before publishing your file , you need to type in 
+<code>git remote add origin https://github.com/ahmeda1955/first-repo.git</code> that's just you, connecting your local repo, to the github cloud repo.</p></li>
+<li>Finally, what we've all been waiting for! You are now, ready to <code>push</code> or publish your file to the public! It's simpler than you probably thought. All you need to type in, in your local ide is <code>git push</code>. Yup, that's all, just <code>git push</code>; git is smart enough to only "push" or publish the files you have commited, by using <code>git commit -m "commit mesage "</code>
+</li>
+</ol>
+
+<h2>
+<a id="workflow--commands" class="anchor" href="#workflow--commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Workflow &amp; Commands</h2>
+
+<ol>
+<li>
+<code>git status</code> is a command used to help you stay on top of, and up to date with your file/code. For example, if your file name is shown in red, then git is letting you know that the last commit was altered/changed, if it is red, then git is telling you, that you are good, you are ready to push your file up to the cloud. _To use <code>git status</code> all you need type is <code>git status</code>, nothing less, nothing more; git needs to be initialized in your repository.<br>
+</li>
+<li>
+<code>git add</code> is a command used to put your file in the stage, so that it is ready to be commited. To use <code>git add</code> with a specific file, you'd need to type in <code>git add "your-file's-name</code> your file's name without the quotations. Also, you can use the command <code>git add --all</code> that would make git add <em>everything</em> in your current repository to the stage.</li>
+<li>
+<code>git commit</code> is a command used to allow you to add a message next to your snapshots code. Once you commit a file, and add a message, your file is ready to be pushed up to the cloud;  commiting a file is the last step your file goes through before it is pushed to the cloud. To successfully commit your file, you neded to  type in<br>
+<code>git commit -m "message to remind you what the commit was for"</code>
+</li>
+<li>
+<code>git push</code> is the actual last step your file goes through to be pushed to the cloud, it makes sense! You are "pushing" all the files you added and commited to the cloud. To push your file to the cloud, you just need to type in <code>git push</code>, this will send all the files you have added and commited to the cloud instantly.</li>
+</ol>
+
+<h2>
+<a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling</h2>
+
+<ul>
+<li>If you happened to <code>init</code> git in the wrong directory, you can simply just delete the whole .git subdirectory by running the command:<br>
+<code>rm -rf .git</code> </li>
+</ul>
+
+<h2>
+<a id="collaboration" class="anchor" href="#collaboration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collaboration</h2>
+
+<p><em>One of GitHub's best features is the collaboration system it offers. There are a couple of steps and concepts you need to understand in order for you to be successfuly able to collaborate on files in GitHub. You need to understand the concepts of <strong>forking</strong>, <strong>cloning</strong>, <strong>pull requests</strong>, and <strong>pulling</strong>.</em> </p>
+
+<ol>
+<li><p><em><strong>Forking:</strong></em> Forking is just a fancy/cool term that describes the action of making a copy of someone else's repository, on your GitHub. On the person's repository page on GitHub, there should be a button named as "fork" on the top right. Clicking on that button allows you to "fork" that person's repository. </p></li>
+<li><p><em><strong>Cloning:</strong></em> Cloning allows you to literally, clone a person's repository or make a copy of it in your IDE. Though cloning is a very cool and useful feature from Github, cloning a file <em>does not</em> push it and mix it with their code. Anyways, to clone a person's file, you need to use the command <code>git clone</code>. After forking a person's repository, on the right side of the page, you should see a text box named "SSH clone URL". Copy and Paste that URL after the <code>git clone</code> command. So, it should be something like this:<br>
+<code>git clone https://github.com/ahmeda1955/first-repo.git</code></p></li>
+<li><p><em><strong>Pull requests:</strong></em> After forking a repo, submitting a pull request  will allow the orignal owner to see the changes you've made to their repository. Once a pull request is sent, the repo's original owner  can review the changes made to their repo and even add it to the original code if they like it. You can submit a pull request by clicking on the small green button on the person's Github repo page, and then pressing Create pull request.</p></li>
+<li><p><em><strong>Pulling:</strong></em> If the owner of the original repo you forked thought the change(s) you've made was really worthy of adding, the owner can accept your pull request through Github and <code>pull</code> your file. All they would need to type in is <code>git pull</code> and the changes they have accepted in the pull request would show up on their local machine.</p></li>
+</ol>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/ahmeda1955">ahmeda1955</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
